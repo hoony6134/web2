@@ -5,23 +5,25 @@
     <style type="text/css"> 
         a { text-decoration:none } 
         </style> 
-        <link rel="stylesheet" href="style.css">
+        <!--브라우저 스타일에 따라 다크모드 적용 -->
+            <link rel="stylesheet" href="style.css">
+            <!-- 브라우저 다크모드 끝 -->
 </head>
 <div class="themed">
 <body style="background-color:rgb(255, 255, 255);">
     <a href="index.html"><h1>Project Web 2.0</h1></a>
-    <!--
+    <!-- 버튼으로 다크모드/라이트모드 -->
     <input type="button" value="다크모드" onclick="
     alert('다크 모드를 적용합니다.');
-    document.querySelector('body').style.backgroundColor = 'cccccc';
+    document.querySelector('body').style.backgroundColor = 'black';
     document.querySelector('body').style.color = 'white';
     ">
     <input type="button" value="라이트모드" onclick="
     alert('라이트 모드를 적용합니다.');
-    document.querySelector('body').style.backgroundColor = 'cccccc';
+    document.querySelector('body').style.backgroundColor = 'white';
     document.querySelector('body').style.color = 'black';
     ">
-    -->
+    <!-- 버튼 다크모드 끝 -->
     <ol>
         <li>html</li>
         <li>css</li>
