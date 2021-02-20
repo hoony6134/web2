@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Project Web 2.0 | KAIST IPCEO 11기 임정훈</title>
+    <title>Project.Web | KAIST IPCEO 11기 임정훈</title>
     <style type="text/css"> 
         a { text-decoration:none } 
         </style> 
         <!--브라우저 스타일에 따라 다크모드 적용 -->
-            <link rel="stylesheet" href="style.css">
+            <!-- <link rel="stylesheet" href="style.css">-->
             <!-- 브라우저 다크모드 끝 -->
+            <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
+            <script language="javascript">
+                function time(){
+                 var time= new Date(); //시간받기위해서 new date
+                     document.getElementById("now").innerHTML=time.getHours()+"시 "+time.getMinutes()+"분 "+time.getSeconds()+"초";
+                    setInterval("time()",1000);     //1초 지난후 time()실행
+                 }
+                     </script>
 </head>
 <div class="themed">
-<body style="background-color:#4b4b4b;">
-    <a href="index.html"><h1>Project Web 2.0</h1></a>
+<body style="background-color:#2b2b2b;">
+    <a href="index.html"><h1>Project Web 2.0 X 연결 | 임정훈 作 (2021) </h1></a><body onload="time()"> 
+        <h2> 현재 시간: <span id="now"></span></h2>
     <!-- 버튼으로 다크모드/라이트모드 -->
-    <input type="button" value="다크모드" onclick="
-    alert('다크 모드를 적용합니다.');
-    document.querySelector('body').style.backgroundColor = '#4b4b4b';
+    <input type="button" value="화이트모드" onclick="
+    alert('화이트모드를 적용합니다.');
+    document.querySelector('body').style.backgroundColor = '#2b2b2b;
     document.querySelector('body').style.color = 'white';
     ">
-    <input type="button" value="라이트모드" onclick="
-    alert('라이트 모드를 적용합니다.');
+    <input type="button" value="블랙모드" onclick="
+    alert('블랙모드를 적용합니다.');
     document.querySelector('body').style.backgroundColor = 'white';
     document.querySelector('body').style.color = 'black';
     ">
@@ -44,6 +53,109 @@
     document.querySelector('body').style.backgroundColor = 'black';
 </script>
 -->
+<div id="target" style="position: fixed; top:0; left:0; z-index:-1;">
+    <script>
+        function setup(){
+            renderer = createCanvas(windowWidth,windowHeight);
+            renderer.parent('target');
+            background('gray');
+            circle(0, 0, 200);
+            circle(windowWidth, windowHeight, 200);
+            circle(windowWidth, 0, 200);
+            circle(0, windowHeight, 200);
+            strokeWeight(10); // Make the points 10 pixels in size
+            strokeWeight(1);
+            line(0,0,windowWidth,windowHeight);
+            line(0,windowHeight,windowWidth,0)
+        }
+        function draw(){
+            strokeWeight(1);
+            stroke('black');
+            circle(Math.random()*windowWidth,Math.random()*windowHeight,Math.random()*10);
+            strokeWeight(Math.random()*10);
+            stroke('purple');
+            point(Math.random()*windowWidth,Math.random()*windowHeight);
+            stroke('black');
+            strokeWeight(1)
+            circle(mouseX,mouseY,Math.random()*50);
+            line(pmouseX,pmouseY,mouseX,mouseY);
+        }
+    </script>
+    </div>
+    <hr>
+<h2>Checklist | 체크리스트</h2>
+<ol>
+<li>Install | 설치</li>
+<li>Execute | 실행</li>
+<li>Distribute | 배포</li>
+</ol>
+>> Select | 선택
+<hr>
+<h2>Tags</h2>
+<strong>#tag</strong>
+<strong>#극단적 사고</strong>
+<strong>#따따따=www</strong>
+<strong>#통계</strong>
+</br></br>
+<hr>
+<h2>Languages We Use | 사용하는 언어</h2>
+<ol>
+<li><a href="html.html" style="text-decoration: none; color: 737373">html</a></li>
+<li><a href="css.html" style="text-decoration: none; color: 737373">css</a></li>
+<li><a href="js.html" style="text-decoration: none; color: 737373">javascript</a></li>
+</ol>
+<hr>
+<h2>Random Images(Unsplash) | 랜덤 이미지(Unsplash)</h2>
+<a href="https://unsplash.com" style="text-decoration: none; color: 737373"><img src="https://source.unsplash.com/random" height="300" alt="클릭하면 이미지 출처로 연결됩니다."></a>
+<hr>
+<h2>Useful sites | 유용한 사이트</h2>
+<ol>
+<li><a href="https://unsplash.com" style="text-decoration: none; color: 737373">Unsplash</a></li>
+<li><a href="https://tawk.to" style="text-decoration: none; color: 737373">tawk.to</a></li>
+<li><a href="https://source.unsplash.com" style="text-decoration: none; color: 737373">source.unsplash.com (random image)</a></li>
+<li><a href="https://disqus.com" style="text-decoration: none; color: 737373">disqus</a></li>
+<li><a href="https://netlify.com" style="text-decoration: none; color: 737373">netlify</a></li>
+<li><a href="http://info.cern.ch/" style="text-decoration: none; color: 737373">The first Website</a></li>
+<li><a href="https://seomal.com/map/1" style="text-decoration: none; color: 737373">Html Map</a></li>
+</ol>
+<hr>
+<h2>Recommended Video | 추천 동영상</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HEMXiK2gX-8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfollscreen></iframe>
+<script>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://scian2.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/602f8c7d9c4f165d47c4ec62/1eusrpjbe';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+<footer>
+	<hr>
+	(c) Copyright by 2021 Scian. All Rights Reserved. Visit my <a href="https://github.com/hoony6134" style="text-decoration: none; color: 737373">Github</a> profile. Project With <a href="https://ipceo.kaist.ac.kr" style="text-decoration: none; color: 737373">KAIST IPCEO</a>.<br><a href="maito:admin@scian.cf" style="text-decoration: none; color: 737373">Contact</a> | <a href="https://scian.cf" style="text-decoration: none; color: 737373">Blog</a> | <a href="https://instabio.cc/hoony6134" style="text-decoration: none; color: 737373">Social Profile</a>
+</footer>
 </div>
 </body>
 </html>
