@@ -1,0 +1,14 @@
+.themed {
+  display: block;
+  background: black;
+  width: 1000;
+  height: 1000;
+  color: white;
+}
+
+@media (prefers-color-scheme: light) {
+  .themed {
+    background: white;
+    color: black;
+  }
+}
