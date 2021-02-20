@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        P5 | KAIST IPCEO 11기 임정훈
+    </title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
+</head>
+<body></body>
+<h1>홀림 | 임정훈 作 (2021)</h1>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum voluptates perferendis laborum a ratione blanditiis, hic temporibus minus, labore incidunt eos quidem impedit rem sit itaque soluta voluptatem voluptatum. Quo.
+    <div id="target" style="position: fixed; top:0; left:0; z-index:-1;">
+<script>
+    function setup(){
+        renderer = createCanvas(windowWidth,windowHeight);
+        renderer.parent('target');
+        background('gray');
+        circle(0, 0, 200);
+        circle(windowWidth, windowHeight, 200);
+        circle(windowWidth, 0, 200);
+        circle(0, windowHeight, 200);
+        strokeWeight(10); // Make the points 10 pixels in size
+        strokeWeight(1);
+        line(0,0,windowWidth,windowHeight);
+        line(0,windowHeight,windowWidth,0)
+    }
+    function draw(){
+        strokeWeight(1);
+        stroke('black');
+        circle(Math.random()*windowWidth,Math.random()*windowHeight,Math.random()*10);
+        strokeWeight(Math.random()*10);
+        stroke('purple');
+        point(Math.random()*windowWidth,Math.random()*windowHeight);
+        stroke('black');
+        strokeWeight(1)
+        circle(mouseX,mouseY,Math.random()*50);
+        line(pmouseX,pmouseY,mouseX,mouseY);
+    }
+</script>
+</div>
+</body>
+</html>
