@@ -1,9 +1,14 @@
 {
   "name": "Scian.Dev",
   "short_name": "Scian",
-  "theme_color": "#004983",
-  "background_color": "#7ca2c1",
+  "icons": [{
+    "src": "icon.jpg",
+      "sizes": "128x128",
+      "type": "image/png"
+    }],
+            "lang": "ko-KR",
+  "start_url": "/index.html",
   "display": "standalone",
-  "scope": "/",
-  "start_url": "https://dev.scian.cf"
+  "background_color": "white",
+  "theme_color": "white"
 }
