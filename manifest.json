@@ -1,0 +1,9 @@
+{
+  "name": "Scian.Dev",
+  "short_name": "Scian",
+  "theme_color": "#004983",
+  "background_color": "#7ca2c1",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "https://dev.scian.cf"
+}
